@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.4.xsd">
+
+  <module name="account" package="com.axelor.apps.account.db"/>
+
+  <entity sequential="true" name="Invoice" lang="java">
+    <decimal name="netIgst" readonly="true"/>
+    <decimal name="netCgst" readonly="true"/>
+    <decimal name="netSgst" readonly="true"/>
+    <many-to-one ref="com.axelor.apps.base.db.Address" name="invoiceAddress"
+      required="true"/>
+    <many-to-one ref="com.axelor.apps.base.db.Address" name="shippingAddress"/>
+  </entity>
+</domain-models>

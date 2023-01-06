@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.4.xsd">
+
+  <menuitem name="menu-gst-root" title="Gst" icon="fa-tasks"
+    if="__config__.app.isApp('gst')" icon-background="#3f6bb9"/>
+
+  <menuitem title="Invoice" name="menu-gst-root-invoice" parent="menu-gst-root"
+    action="menu.gst.root.invoice"/>
+  <action-view name="menu.gst.root.invoice" title="Invoice"
+    model="com.axelor.apps.account.db.Invoice">
+    <view type="grid" name="invoice-grid"/>
+    <view type="form" name="invoice-form"/>
+  </action-view>
+
+  <menuitem title="Company" name="menu-gst-root-company" parent="menu-gst-root"
+    action="menu.gst.root.company"/>
+  <action-view name="menu.gst.root.company" title="Company"
+    model="com.axelor.apps.base.db.Company">
+    <view type="grid" name="company-grid"/>
+    <view type="form" name="company-form"/>
+  </action-view>
+
+  <menuitem title="Addresses" name="menu-gst-root-address" parent="menu-gst-root"
+    action="menu.gst.root.address"/>
+  <action-view name="menu.gst.root.address" title="Address"
+    model="com.axelor.apps.base.db.Address">
+    <view name="address-grid" type="grid"/>
+    <view name="address-form" type="form"/>
+  </action-view>
+
+  <menuitem title="Partner" name="menu-gst-root-partner" parent="menu-gst-root"
+    action="menu.gst.root.partner"/>
+  <action-view name="menu.gst.root.partner" title="Partner"
+    model="com.axelor.apps.base.db.Partner">
+    <view name="partner-grid" type="grid"/>
+    <view name="partner-form" type="form"/>
+  </action-view>
+
+  <menuitem title="Product" name="menu-gst-root-product" parent="menu-gst-root"/>
+
+  <menuitem title="Product" name="menu-gst-product" parent="menu-gst-root-product"
+    action="menu.gst.product"/>
+  <action-view name="menu.gst.product" title="Product"
+    model="com.axelor.apps.base.db.Product">
+    <view name="product-grid" type="grid"/>
+    <view name="product-form" type="form"/>
+  </action-view>
+
+  <menuitem title="Product Categories" name="menu-gst-product-categories"
+    parent="menu-gst-root-product" action="menu.gst.product.categories"/>
+  <action-view name="menu.gst.product.categories" title="Product Categories"
+    model="com.axelor.apps.base.db.ProductCategory">
+    <view name="product-category-grid" type="grid"/>
+    <view name="product-category-form" type="form"/>
+  </action-view>
+
+
+
+</object-views>
