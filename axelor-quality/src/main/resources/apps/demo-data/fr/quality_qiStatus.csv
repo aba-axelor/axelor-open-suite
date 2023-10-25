@@ -1,0 +1,6 @@
+"importId";"name";"priority";"isClosedStatus";"isCancelledStatus"
+1;"Nouveau";0;"false";"false"
+2;"En cours";1;"false";"false"
+3;"A vérifier";2;"false";"false"
+4;"Soldée";3;"true";"false"
+5;"Annulée";4;"false";"true"
